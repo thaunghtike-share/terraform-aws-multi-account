@@ -1,14 +1,8 @@
 terraform {
-  backend "remote" {
-    organization = "astradot"
-    workspaces {
-      name = "interview"
-    }
-  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0"
+      version = "4.26.0"
     }
   }
 }
@@ -16,3 +10,4 @@ terraform {
 provider "aws" {
   region = var.aws_region
 }
+
